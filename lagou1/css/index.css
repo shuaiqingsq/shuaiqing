@@ -1,0 +1,31 @@
+html{width:100%;height:100%;}
+body{width:100%;height:100%;margin:0;background:#fff;-webkit-box-sizing:border-box;}
+header{width:100%;height:140px;background:#00B38A;position:fixed;z-index: 9;text-align: center;color:#fff;line-height: 140px;}
+*{margin:0;padding:0;}
+/*底部*/
+footer{width:100%;height:140px;background:#fff;position: fixed;bottom: 0;line-height: 140px;border-top:1px solid #eee;}
+
+footer ul li span{display: inline-block;}
+.icon{background-size: 500px 500px;width:68px;height:67px;float:left;margin-top: 40px;margin-left: 60px;}
+.text{float:left;}
+
+footer ul li{float: left;width:33.33335%;height:100%;list-style: none;text-align: center;
+        color:#C2CFCC;}
+footer ul li:nth-child(1){background:#E7F3F0;color:#00B38A;}
+footer ul li:nth-child(1) .icon{background:url(../img/icon2.png)no-repeat -90px -53.5px;background-size: 750px 750px;}
+footer ul li:nth-child(2) .icon{background:url(../img/icon2.png)no-repeat -32px 5.5px;background-size: 750px 750px;}
+footer ul li:nth-child(3) .icon{background:url(../img/icon2.png)no-repeat -147px 5.5px;background-size: 750px 750px;}
+
+/*身体*/
+section{width:100%;overflow:hidden;background:#fff;padding-top:140px;padding-bottom: 140px;z-index: 8;}
+section .custom_info{border-bottom: 1px solid #e8e8e8;height: 143px;line-height: 143px;padding: 0 15px;color: #555;font-size: 1.4rem;position: relative;font-size: 45px;}
+.custom_info .info{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;display: block;margin-right: 100px;height: 100%;position: relative;width:80%;padding:0 30px;}
+.custom_info a{position: absolute;text-decoration: none;right: 15px;top: 0;display: block;float: right;background-color: #f5f5f5;padding: 0 70px;height: 110px;line-height: 110px;margin-top: 15px;color: #00b38a;border-radius: 50px;}
+section ul li{width:90%;padding:50px;position:relative;border-bottom: 1px solid #e8e8e8;height:150px;}
+section ul li .item_logo{width:200px;height:200px;float:left;display: inline-block;}
+section ul li .item_desc{margin-left: 250px;height: 62px;color: #333;position:absolute;top:25px;}
+section ul li .item_desc .item_title{font-size: .9rem;margin-bottom: 6px;width: 80%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+section ul li .item_desc .item_info{margin-bottom: 6px;width: 80%;height: 55px;line-height: 55px;}
+section ul li .item_desc .item_info .item_pos{font-size: .7rem;float: left;width: 60%;display: inline-block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+section ul li .item_desc .item_info .item_salary{font-size: .7rem;color: #00b38a;float: right;}
+section ul li .item_desc .item_time{font-size: .6rem;color: #888;}
