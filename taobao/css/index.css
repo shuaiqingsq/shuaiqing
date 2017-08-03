@@ -1,0 +1,197 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url("../font/iconfont.eot");
+  src: url("../font/iconfont.eot?#iefix") format("embedded-opentype"), url("../font/iconfont.woff") format("woff"), url("../font/iconfont.ttf") format("truetype"), url("../font/iconfont.svg#iconfont") format("svg"); }
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 100px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box; }
+
+body header, body footer, body section .advertisement, body section .tt, body section .xsqg {
+  height: 120px;
+  width: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column; }
+  body header {
+    background: #FE5400;
+    padding: 20px;
+    display: flex; }
+    body header .iconfont {
+      line-height: 65px;
+      color: #fff; }
+    body header .search {
+      position: relative;
+      width: 100%;
+      flex: 1;
+      box-sizing: border-box;
+      background-color: #B52600;
+      text-align: center;
+      border-radius: 8px;
+      padding: 10px; }
+      body header .search input {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        line-height: 40px;
+        border: 0 none;
+        outline: 0;
+        font-size: 50px;
+        color: #eee;
+        background: 0 0; }
+      body header .search .iconfont {
+        font-size: 40px;
+        color: #F0E0DC; }
+  body footer {
+    display: flex;
+    height: 140px; }
+    body footer a {
+      flex: 20%;
+      text-align: center;
+      color: #5D656B; }
+      body footer a .iconfont {
+        font-size: 80px; }
+      body footer a p {
+        font-size: 36px; }
+  body section {
+    flex: 1;
+    overflow: auto;
+    background: #EEEEEE; }
+    body section .advertisement {
+      height: 140px;
+      line-height: 140px;
+      display: flex;
+      background: #5F646E;
+      color: #FFF; }
+      body section .advertisement .iconfont {
+        background: #5F646E;
+        color: #FFF;
+        flex: .1;
+        height: 100%; }
+      body section .advertisement .txt {
+        flex: .6;
+        background: #5F646E;
+        color: #FFF;
+        position: relative; }
+        body section .advertisement .txt img {
+          width: 100px;
+          height: 100px;
+          display: inline-block;
+          position: absolute;
+          top: 20px; }
+        body section .advertisement .txt span {
+          font-size: 40px;
+          line-height: 140px;
+          height: 100%;
+          display: inline-block;
+          margin-left: 120px; }
+      body section .advertisement .click {
+        flex: .3;
+        background: #FE5400;
+        text-align: center; }
+        body section .advertisement .click a {
+          font-size: 48px;
+          color: #fff;
+          width: 100%; }
+    body section .banner {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      height: 310px; }
+      body section .banner ul {
+        width: 400%;
+        list-style: none;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        transition: all .2s; }
+        body section .banner ul li {
+          width: 25%;
+          float: left; }
+          body section .banner ul li img {
+            width: 100%;
+            height: 100%; }
+      body section .banner ol {
+        position: absolute;
+        bottom: 0px;
+        width: 25%;
+        list-style: none;
+        height: 20%;
+        right: 10px; }
+        body section .banner ol .cur {
+          background: #FE5400; }
+        body section .banner ol li {
+          width: 30px;
+          height: 30px;
+          background: rgba(255, 255, 255, 0.8);
+          border-radius: 50%;
+          float: left;
+          margin: 15px; }
+    body section .cnav {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      background: #fff; }
+      body section .cnav div {
+        display: flex;
+        flex-flow: row wrap;
+        flex: .2;
+        height: 185px;
+        padding: 20px; }
+        body section .cnav div img {
+          width: 155px;
+          height: 110px; }
+        body section .cnav div p {
+          font-size: 35px;
+          width: 100%;
+          text-align: center;
+          color: #666666; }
+    body section .tt {
+      border-top: 2px solid #F4F4F4;
+      padding: 10px;
+      height: 100px;
+      display: flex;
+      background: #fff; }
+      body section .tt p {
+        width: 80%;
+        font-size: 50px;
+        border-left: 4px solid #F4F4F4;
+        padding-left: 20px; }
+    body section .xsqg {
+      height: 570px;
+      background: #fff;
+      margin-top: 30px; }
+      body section .xsqg ul {
+        width: 100%;
+        list-style: none; }
+        body section .xsqg ul li {
+          height: 285px;
+          float: left;
+          width: 30%; }
+          body section .xsqg ul li img {
+            width: 100%;
+            height: 100%; }
+          body section .xsqg ul li:nth-child(1) {
+            height: 200%;
+            width: 40%; }
+
+/*# sourceMappingURL=index.css.map */
