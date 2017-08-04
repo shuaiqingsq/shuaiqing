@@ -171,6 +171,10 @@ body {
       height: 100px;
       display: flex;
       background: #fff; }
+      body section .tt img {
+        flex: .2;
+        padding: 15px 20px;
+        width: 200px; }
       body section .tt p {
         width: 80%;
         font-size: 50px;
@@ -192,6 +196,31 @@ body {
             height: 100%; }
           body section .xsqg ul li:nth-child(1) {
             height: 200%;
-            width: 40%; }
+            width: 40%;
+            position: relative; }
+            body section .xsqg ul li:nth-child(1) .timer {
+              position: absolute;
+              top: 150px;
+              left: 30px; }
+              body section .xsqg ul li:nth-child(1) .timer .h {
+                display: inline-block;
+                width: 3.5rem;
+                height: 3.5rem;
+                line-height: 3.5rem;
+                vertical-align: middle;
+                margin: 0 0.03125rem;
+                color: #fff;
+                background: #333;
+                text-align: center;
+                font-size: 2.5rem;
+                border-radius: 0.02667rem; }
+              body section .xsqg ul li:nth-child(1) .timer .dot {
+                display: inline-block;
+                color: #000;
+                width: 1rem;
+                height: 3.5rem;
+                text-align: center;
+                font-size: 2rem;
+                line-height: 1rem; }
 
 /*# sourceMappingURL=index.css.map */

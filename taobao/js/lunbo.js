@@ -15,6 +15,7 @@ window.onload=function(){
     var uleft = 0;
     var a = 0;
     list.addEventListener('touchstart',function(ev){
+        clearInterval(timer);
         var ex = ev.changedTouches[0].pageX;
         uleft = this.offsetLeft;
 
@@ -32,6 +33,7 @@ window.onload=function(){
                 a=-(lis.length-1);
             }
             list.style.left=a*w+'px';
+            timer=setInterval(dy,3000);
         });
     });
 
@@ -57,11 +59,13 @@ window.onload=function(){
         }
     }
 
-    setInterval(function(){
-        index++;
+    function dy(){
+     index++;
         if(index>3){
             index=0;
         }
-        ld(index);
-    },5000);
+        ld(index);   
+    }
+
+    var timer = setInterval(dy,5000);
 }
