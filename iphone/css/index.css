@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url("../font/iconfont.eot");
+  src: url("../font/iconfont.eot?#iefix") format("embedded-opentype"), url("../font/iconfont.woff") format("woff"), url("../font/iconfont.ttf") format("truetype"), url("../font/iconfont.svg#iconfont") format("svg"); }
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box; }
+
+body header, body .zdh {
+  height: 40px;
+  width: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column; }
+  body header {
+    background: #EF3239;
+    border-bottom: #A82D31 2px solid;
+    display: flex;
+    padding: 10px; }
+    body header div {
+      color: #fff;
+      width: 33.333%;
+      line-height: 100%; }
+      body header div:nth-child(1) {
+        float: left;
+        text-align: left; }
+      body header div:nth-child(2) {
+        text-align: center; }
+      body header div:nth-child(3) {
+        float: right;
+        text-align: right; }
+  body .zdh {
+    border-bottom: 1px solid #CCCCCC;
+    display: flex;
+    background: #FDFDFD; }
+    body .zdh div {
+      width: 25%;
+      text-align: center;
+      line-height: 40px; }
+      body .zdh div:nth-child(1) {
+        color: #EF3239; }
+        body .zdh div:nth-child(1) .iconfont {
+          font-size: 16px;
+          line-height: 100%; }
+  body section {
+    flex: 1;
+    overflow: auto; }
+    body section li {
+      width: 100%;
+      height: 100px;
+      border-bottom: 1px solid #E0E0E0;
+      display: flex; }
+      body section li .left {
+        flex: .35; }
+        body section li .left img {
+          margin-top: 10px; }
+      body section li .right {
+        flex: .65;
+        padding: 10px; }
+        body section li .right p {
+          font-size: 12px; }
+          body section li .right p:nth-child(1) {
+            color: #000; }
+          body section li .right p:nth-child(2) {
+            color: #F23838;
+            font-size: 14px;
+            margin-top: 10px; }
+          body section li .right p:nth-child(3) {
+            color: #808080; }
+
+/*# sourceMappingURL=index.css.map */
