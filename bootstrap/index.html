@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+	<script src="js/angular.min.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+</head>
+<body>
+	<header></header>
+	<content></content>
+	<container></container>
+	<!--<footer></footer>-->
+</body>
+<script>
+	var app = angular.module("myapp",[]);
+	app.directive("header",function(){
+		return {
+			restrict:"EA",
+			templateUrl:"views/header.html",
+			replace:true
+		};
+	});
+	app.directive("content",function(){
+		return {
+			restrict:"EA",
+			templateUrl:"views/content.html",
+			replace:true
+		};
+	});
+//	app.directive("footer",function(){
+//		return {
+//			restrict:"EA",
+//			templateUrl:"views/footer.html",
+//			replace:true
+//		};
+//	});
+	app.directive("container",function(){
+		return {
+			restrict:"EA",
+			templateUrl:"views/container.html",
+			replace:true
+		};
+	});
+</script>
+</html>
