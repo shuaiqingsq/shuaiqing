@@ -1,0 +1,30 @@
+.banner .banner_main>span{display: inline-block;height:72px;width:41px;background:rgba(0,0,0,.3);color:#fff;font-size: 50px;text-align: center;cursor:pointer;}
+.banner .banner_main .left{position:absolute;top:40%;left:0;}
+.banner .banner_main .right{position:absolute;top:40%;right:0;}
+
+/*身体*/
+.body .body_main .fl{height:110px;border:1px solid #DFDFDF;margin-top: 45px;}
+.body .body_main .fl .fl_title{height:53px;border-bottom: 1px #DFDFDF dotted;padding:0 10px;line-height: 53px;font-size: 18px;color:#565656;}
+.body .body_main .fl .fl_content{height:52px;padding:0 10px 0 100px;line-height: 52px;font-size: 18px;color:#565656;}
+.body .body_main .fl .fl_content ul li{float:left;width:100px;}
+.body .body_main .fl .fl_content ul li a{color:#A5A3A3;}
+.body .body_main .fl .fl_content ul li a:hover{color:#00A0E9 !important;}
+.hoverfla a{color:#00A0E9 !important;}
+
+.fdh{height:50px;border:1px solid #DFDFDF;margin-top: 45px;}
+.fdh ul li{width:100px;text-align: center;line-height: 50px;float:left;border-right: 1px solid #dfdfdf;color:#565656;font-size: 16px;position:relative;}
+.fdhlis{color:#00A0E9 !important;}
+.fdh ul li .hoverfdh{border-right: 1px solid #dfdfdf;color:#565656;border-left: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf;width:100px;height:73px;position:absolute;left:-1px;background:#fff;}
+.fdh ul li .hoverfdh ul li{width:100px;text-align: center;line-height: 35px;color:#565656;font-size: 15px;border-right:none !important;}
+
+.bf{height:1020px;margin-top: 35px;}
+.bf ul li{float:left;width:381px;height:320px;margin:14px;cursor:pointer;}
+.bf ul li:first-child{margin-left:0px;}
+.bf ul li:last-child{margin-right: 0px;}
+
+/*分页*/
+.fy{width:1200px;margin-top: 65px;height:30px;}
+.fy ul{width:490px;margin:0 auto;}
+.fy ul li{float:left;margin:0 10px;border:1px solid #DFDFDF;border:15px;}
+.fy ul li a{float:left;display: block;border:1px solid #DFDFDF;}
+.fy ul li a input{width:20px;border:0px;}
