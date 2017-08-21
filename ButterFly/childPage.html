@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>子页面</title>
+    <link rel="stylesheet" href="css/public.css" />
+    <link rel="stylesheet" href="css/childPage.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/childPage.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+    <!-- 头部导航栏 -->
+    <header>
+        <div class="main">
+        <!-- logo -->
+            <div class="icon">
+            </div>
+            <!-- li -->
+            <div class="nav_list">
+                <ul>
+                    <li><a href="https://v.qq.com/tv/">电视剧</a></li>
+                    <li><a href="http://v.qq.com/variety/">综艺</a></li>
+                    <li><a href="http://v.qq.com/movie/">电影</a></li>
+                    <li><a href="http://film.qq.com/">VIP影院</a></li>
+                    <li><a href="http://v.qq.com/cartoon/">动漫</a></li>
+                    <li><a href="http://v.qq.com/child/">少儿</a></li>
+                    <li><a href="http://v.qq.com/ent/">娱乐</a></li>
+                    <li><a href="http://v.qq.com/music/">音乐</a></li>
+                    <li><a href="#" title="点击展开更多" style="font-size:20px;font-weight:700px;"> &nbsp;∷&nbsp;</a></li>
+                </ul>
+            </div>
+            <!-- 搜索框 -->
+            <div class="search">
+                <form action="#" method="get" accept-charset="utf-8">
+                    <div class="inputs">
+                        <input type="text" placeholder="醉玲珑"/>
+                    </div>
+                    <button>全网搜</button>
+                </form>
+            </div>
+            <!-- 用户 -->
+            <div class="nav_right">
+                <ul>
+                    <li><a href="#">VIP</a></li>
+                    <li><a href="#">历史</a></li>
+                    <li class="dl"><img src="img/avatar.png"></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="login" style="display:none;">
+        <a href="javascript:void(0)" class="btn_close" title="关闭"></a>
+        <div class="headerul">
+            <ul>
+                <li class="logincurrent">
+                    <a href="javascript:void(0);" class="tab_item tab_item_qq">
+                        <i class="ico_loginqq"></i>
+                        <span class="item_inner">QQ账号登录</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="tab_item tab_item_wx">
+                        <i class="ico_loginwx"></i>
+                        <span class="item_inner">微信账号登录</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="login_tips">
+            <div class="tips_txt">微信和QQ是两个独立账号，账号信息不互通</div>
+        </div>
+        <div class="web_qr_login">
+            <div class="tips">
+                <div class="title">账号密码登录</div>
+                <div id="qlogin_entry">推荐使用
+                    <a class="link_tips" href="javascript:void(0);">快速安全登录</a>，防止盗号。
+                </div>
+            </div>
+            <div class="login_form">
+                <!-- <form action="index.html"> -->
+                    <div class="uinArea">
+                        <label class="input_tips">支持QQ号/邮箱/手机号登录</label>
+                        <div class="inputOuter">
+                            <input class="inputstyle zh" type="text">
+                        </div>
+                    </div>
+                    <div class="pwdArea">
+                        <label class="input_tips">密码</label>
+                        <div class="inputOuter">
+                            <input class="inputstyle pwd" type="password">
+                        </div>
+                    </div>
+                    <div class="submit">
+                        <a class="login_button" href="javascript:void(0);">
+                            <input value="登 录" class="btn" type="submit">
+                        </a>
+                    </div>
+                <!-- </form> -->
+            </div>
+        </div>
+        <div class="bottom">
+            <div title="为了确保你的信息安全，不建议在网吧等公共环境勾选此项" class="low_login">
+                <a class="checked" href="javascript:void(0);"></a>
+                <label class="low_login_wording" id="low_login_wording">下次自动登录</label>
+            </div>
+            <a href="https://ssl.ptlogin2.qq.com/ptui_forgetpwd" class="link" id="forgetpwd" target="_blank">忘了密码？</a>
+            <span class="dotted">|</span>
+            <a href="https://ssl.ptlogin2.qq.com/j_newreg_url" class="link" target="_blank">注册新帐号</a>
+            <span class="dotted">|</span>
+            <a class="link" id="feedback_web" href="https://support.qq.com/products/14800" target="_blank">意见反馈</a>
+        </div>
+        <div class="login_iframe_wx" style="display:none;">
+            <label class="iframe_title">安全登录，防止被盗</label>
+            <iframe name="_login_frame_wechat_" id="_login_frame_wechat_" scrolling="no" style="width:100%; height:215px;" src="https://open.weixin.qq.com/connect/qrconnect?appid=wx5ed58254bc0d6b7f&amp;redirect_uri=https%3A//video.qq.com/fcgi-bin/wx_login%3Ffrom%3D1&amp;response_type=code&amp;scope=snsapi_login&amp;state=111&amp;href=https%3A//vm.gtimg.cn/tencentvideo/vstyle/web/common/style/iframe_login_wx.css" frameborder="no">
+            </iframe>
+            </div>
+    </div>
+    <div class="bg" style="display:none;"></div>
+    <!-- 头部结束 -->
+
+    <!-- 主题开始 -->
+    <div class="site_container container_player">
+        <div class="player_bg_ad">
+            <div class="container_inner">
+                <div class="player_container">
+                    <!-- 视频部分 -->
+                    <div class="mod_player_section">
+                        <div class="mod_player"><!--autoplay-->
+                            <video  controls loop start width="100%" height="85%">
+                                <source src="http://221.182.131.81/cache.p4p.com/l0024mpij2x.p212.2.mp4?sdtfrom=v1010&guid=ad86312ca7fd9f34a2c1b4ab5c400b57&vkey=322D6E1098D31A93963BFB99126FF79500E271B9504D42ACB4FE98DFE278C6ED27328484800AA64D42306B9951A691DF22403DD6465E58856FFFA0F58EE9D5C03B8F80E55EBCA1E214B603B5AE25169DFC5D9D93DBDACC9F9BBBE5C5F0FBB5E73DCF3778FAE63B54BBEDBF2941CF3FECE26131D1599D0E56">
+                                您的浏览器版本太低,请及时更新  
+                            </video>
+                        </div>
+                    </div>
+                    <!-- 选集、花絮 -->
+                    <div class="mod_player_side">
+                        <div class="player_side_hd">
+                            <ul>
+                                <li class="side_hdcurrent">选集</li>
+                                <li>花絮</li>
+                            </ul>
+                        </div>
+                        <!-- 选集 -->
+                        <div class="player_side_bd xs">
+                            <div class="mod_follow_act">
+                                <strong class="player_title">饭局的诱惑 第2季
+                                    <i class="mark_v">
+                                        <img src="img/childPageImg/mark_4.png">
+                                    </i>
+                                </strong>
+                                <a href="#" title="加入看单" class="btn_collect">
+                                    <i class="icon">
+                                        <svg class="svg_icon">
+                                            <path d="M19 15h-2v2a1 1 0 0 1-2 0v-2h-2a1 1 0 0 1 0-2h2v-2a1 1 0 1 1 2 0v2h2a1 1 0 1 1 0 2zm-.067-7c0 .049-.021.091-.028.138-.003.021 0 .042-.004.063l-.008-.002a.985.985 0 0 1-.96.801 1 1 0 0 1-1-1c0-.054.023-.101.031-.153l-.019-.003c.183-.882.057-1.979-.881-2.927-.471-.476-1.419-.909-2.253-.909-1.427 0-2.266 1.172-3.131 1.802L9.496 6.894 8.287 5.828c-.594-.561-1.747-1.823-3.144-1.823-.834 0-1.679.316-2.253.897-1.31 1.323-1.106 3.318-.177 4.341l6.751 6.068.016-.014 1.154 1.037-.017.017a.983.983 0 0 1 .254.649 1 1 0 0 1-1 1 .987.987 0 0 1-.648-.253l-.004.005-.037-.033-.025-.021-7.65-6.782C-.506 8.862-.506 5.567 1.478 3.543A5.071 5.071 0 0 1 5.131 2c1.383 0 2.68.548 3.654 1.543l.707.722.706-.722A5.077 5.077 0 0 1 13.853 2c1.383 0 2.68.548 3.654 1.543 1.17 1.195 1.624 2.831 1.412 4.389.002.024.014.044.014.068zm-9.441 9.994l-.033-.029.065.001-.032.028z"></path>
+                                        </svg>
+                                    </i>
+                                </a>
+                                <div class="hint">
+                                    <span data-role="content">周三20:00，加入看单后第一时间通知你</span>
+                                </div>
+                            </div>
+                            <div class="mod_playlist">
+                                <ul>
+                                    <li class="xzys">
+                                        <div class="figure ">
+                                            <img src="img/childPageImg/xj1.jpg" />
+                                            <div class="figure_caption">
+                                                <span class="figure_info">2017-07-19期</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="figure_title">第2期：陈妍希曝陈晓甜蜜昵称，阿<br/>Sa聊前任回应亮了</a>
+                                        <div class="figure_meta">
+                                            <div class="figure_count">
+                                                <span class="num">1756.1万</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="figure">
+                                            <img src="img/childPageImg/xj2.jpg" />
+                                            <div class="figure_caption">
+                                                <span class="figure_info">2017-07-12期</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="figure_title">第1期：蔡康永加盟《饭局2》，包文<br/>婧回应质疑</a>
+                                        <div class="figure_meta">
+                                            <div class="figure_count">
+                                                <span class="num">3065.1万</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 花絮 -->
+                        <div class="player_side_bd">
+                            <div class="mod_playlist">
+                                <ul>
+                                    <li class="xzys">
+                                        <div class="figure ">
+                                            <img src="img/childPageImg/xj1.jpg" />
+                                            <div class="figure_caption">
+                                                <span class="figure_info">54:32</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="figure_title">第2期：陈妍希曝陈晓甜蜜昵称，阿<br/>Sa聊前任回应亮了</a>
+                                        <div class="figure_meta">
+                                            <div class="figure_count">
+                                                <span class="num">1756.1万</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <h3 class="mod_title">相关花絮（3）</h3>
+                                <ul class="mod_playlist">
+                                    <li>
+                                        <div class="figure">
+                                            <img src="img/childPageImg/hx1.jpg" />
+                                            <div class="figure_caption">
+                                                <span class="figure_info">57:44</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="figure_title">狼人杀花絮局：陈妍希被狼拐走，女<br/>巫马东含冤出局</a>
+                                        <div class="figure_meta">
+                                            <div class="figure_count">
+                                                <span class="num">18.5万</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="figure">
+                                            <img src="img/childPageImg/hx2.jpg" />
+                                            <div class="figure_caption">
+                                                <span class="figure_info">03:02</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="figure_title">花絮：陈妍希被马东吐槽爱秀恩爱，<br/>反击：是你们自己爱问我啊</a>
+                                        <div class="figure_meta">
+                                            <div class="figure_count">
+                                                <span class="num">4.2万</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="figure">
+                                            <img src="img/childPageImg/hx3.jpg" />
+                                            <div class="figure_caption">
+                                                <span class="figure_info">03:23</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="figure_title">花絮：小鲜肉王博文分享私心珍藏版<br/>女追男小妙招</a>
+                                        <div class="figure_meta">
+                                            <div class="figure_count">
+                                                <span class="num">3.0万</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="player_bg_ad_inner">
+                <!-- 侧边广告 -->
+                <div class="bg_1">
+                <img src="img/childPageImg/cgg1.jpg"/>
+                </div>
+                <div class="bg_2">
+                    <img src="img/childPageImg/cgg2.jpg"/>
+                </div>
+            </div>
+            <!-- 视频底部title -->
+            <div class="player_headline">
+                <div class="mod_intro">
+                    <div class="video_base _base">
+                        <h1 class="video_title">
+                            <span class="_base_title" title="第2期：陈妍希曝陈晓甜蜜昵称，阿sa聊前任一句话回应亮了">第2期：陈妍希曝陈晓甜蜜昵称，阿sa聊前任一句话回应亮了</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主题结束 -->
+
+    <!-- 身体部分 -->
+    <div class="container_main">
+        <div class="wrapper">
+            <!-- 左 -->
+            <div class="wrapper_main body_main1">
+                <div class="mod_title">
+                    <h2 class="title">
+                        <span>《饭局的诱惑 第2季》相关明星</span>
+                    </h2>
+                </div>
+                <div class="mod_bd">
+                    <div class="od_recomitem_wrap">
+                        <ul class="mod_recomitem_list">
+                            <li>
+                                <span class="img">
+                                    <img src="img/childPageImg/tx1.png"/>
+                                </span>
+                                <div class="hd">
+                                    <span class="name">蔡康永</span>
+                                    <span class="txt">主持人</span>
+                                </div>
+                            </li>
+                            <li class="list_current">
+                                <span class="img">
+                                    <img src="img/childPageImg/tx2.png"/>
+                                </span>
+                                <div class="hd">
+                                    <span class="name">马东</span>
+                                    <span class="txt">导演</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="img">
+                                    <img src="img/childPageImg/tx3.jpg"/>
+                                </span>
+                                <div class="hd">
+                                    <span class="name">颜如晶</span>
+                                    <span class="txt">演员</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="img">
+                                    <img src="img/childPageImg/tx4.jpg"/>
+                                </span>
+                                <div class="hd">
+                                    <span class="name">利晴天</span>
+                                    <span class="txt">演员</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="img">
+                                    <img src="img/childPageImg/tx5.jpg"/>
+                                </span>
+                                <div class="hd">
+                                    <span class="name">肖骁</span>
+                                    <span class="txt">时尚买手</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="figures_scroll">
+                        <div class="mod_figures">
+                            <ul class="figures_list">
+                                <li>
+                                    <a href="#" class="figure">
+                                        <img src="img/childPageImg/nr1.jpg"/>
+                                        <div class="figure_caption">
+                                            <span class="figure_info">2017-01-23</span>
+                                        </div>
+                                    </a>
+                                    <strong class="figure_title figure_title_two_row">
+                                        <a href="#">大咖的腔调 | 马东，能文能污的女神收割机</a>
+                                    </strong>
+                                    <div class="figure_count">
+                                        <span class="num">8.4万</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="figure">
+                                        <img src="img/childPageImg/nr2.jpg"/>
+                                        <div class="figure_caption">
+                                            <span class="figure_info">2016-11-09</span>
+                                        </div>
+                                    </a>
+                                    <strong class="figure_title figure_title_two_row">
+                                        <a href="#">【2016冬日星空全程回顾】明星们演讲嗨了：汪峰秀恩爱、徐峥</a>
+                                    </strong>
+                                    <div class="figure_count">
+                                        <span class="num">286.3万</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="figure">
+                                        <img src="img/childPageImg/nr3.jpg"/>
+                                        <div class="figure_caption">
+                                            <span class="figure_info">2016-11-03</span>
+                                        </div>
+                                    </a>
+                                    <strong class="figure_title figure_title_two_row">
+                                        <a href="#">《星空演讲》宣传片：汪峰徐峥马东都准备好了</a>
+                                    </strong>
+                                    <div class="figure_count">
+                                        <span class="num">45.4万</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="figure">
+                                        <img src="img/childPageImg/nr4.jpg"/>
+                                        <div class="figure_caption">
+                                            <span class="figure_info">2017-05-05</span>
+                                        </div>
+                                    </a>
+                                    <strong class="figure_title figure_title_two_row">
+                                        <a href="#">大张伟调侃小S戏耍马东，这搞笑功力，不说相声浪费了！</a>
+                                    </strong>
+                                    <div class="figure_count">
+                                        <span class="num">3.2万</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="figure">
+                                        <img src="img/childPageImg/nr5.jpg"/>
+                                        <div class="figure_caption">
+                                            <span class="figure_info">2017-05-02</span>
+                                        </div>
+                                    </a>
+                                    <strong class="figure_title figure_title_two_row">
+                                        <a href="#">马东“下凡”辩论只为何炅</a>
+                                    </strong>
+                                    <div class="figure_count">
+                                        <span class="num">2424</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mod_row_box ycjx exclusive" style="padding-top:0 !important;">
+                    <div class="mod_row_box_top">
+                        <h2>
+                            <a href="#">
+                            为你推荐
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="lis">
+                        <ul>
+                            <li style="margin:0 4px 0 0 !important;">
+                                <div class="pic">
+                                    <img src="img/indexImg/p2.jpg" width="110%"/>
+                                    <div class="redian">2015-01-31期</div>
+                                    <div class="figure_score"><em class="score_l">6</em><em class="score_s">.8</em></div>
+                                </div>
+                                <div class="lis_content">
+                                    <a href="#">国色天香</a>
+                                    <span>第二期：京剧演绎周杰伦经典之作《菊花台》</span>
+                                </div>
+                            </li>
+                            <li style="margin:0 4px !important;">
+                                <div class="pic">
+                                    <img src="img/indexImg/p5.jpg" width="110%" alt="" />
+                                    <div class="redian">2017-07-19期</div>
+                                    <div class="figure_score"><em class="score_l">5</em><em class="score_s">.9</em></div>
+                                </div>
+                                <div class="lis_content">
+                                    <a href="#">小鸡炖蘑菇</a>
+                                    <span>玩游戏打野都迷路！路痴是一种怎样的体验？</span>
+                                </div>
+                            </li>
+                            <li style="margin:0 4px !important;">
+                                <div class="pic">
+                                    <img src="img/indexImg/p6.jpg" width="110%" alt="" />
+                                    <div class="redian">更新至32集</div>
+                                    <div class="figure_score"><em class="score_l">8</em><em class="score_s">.5</em></div>
+                                </div>
+                                <div class="lis_content">
+                                    <a href="#">游戏幻影(泰语)</a>
+                                    <span>推哥复仇女明星反献真心</span>
+                                </div>
+                            </li>
+                            <li style="margin:0 4px !important;">
+                                <div class="pic">
+                                    <img src="img/indexImg/p7.jpg" width="110%" alt="" />
+                                    <div class="redian">2017-07-19期</div>
+                                    <div class="figure_score"><em class="score_l">6</em><em class="score_s">.4</em></div>
+                                </div>
+                                <div class="lis_content">
+                                    <a href="#">饭局的诱惑 第2季</a>
+                                    <span>阿Sa聊前任时回答亮了</span>
+                                </div>
+
+                                <!-- 隐藏视频部分 -->
+                                <div class="layer_video_content">
+                                    <a href="#" class="figure_video_outlink">
+                                        <div class="figure_video">
+                                            <video controls loop start width="132%" height="186.75px" muted="false">
+                                                <source src="video/xsp1.mp4">
+                                                您的浏览器版本太低,请及时更新  
+                                            </video>
+                                        </div>
+                                    </a>
+                                    <div class="video_content">
+                                        <div class="video_title">
+                                            <a href="/x/cover/q7i3ly6ue02nz2f.html" target="_blank">饭局的诱惑 第2季</a>
+                                        </div>
+                                        <div class="video_tags" title="综艺 访谈 蔡康永 马东 颜如晶 利晴天 金靖 肖骁 小猫 王博文 陈妍希 蔡卓妍">
+                                            <span href="javascript:;" class="tag_item">综艺</span>
+                                            <span class="dot">·</span>
+                                            <span href="javascript:;" class="tag_item">访谈</span>
+                                            &nbsp;&nbsp;<span href="javascript:;" class="tag_item">蔡康永</span>
+                                            /<span href="javascript:;" class="tag_item">马东</span>/
+                                            <span href="javascript:;" class="tag_item">颜如晶</span>/
+                                            <span href="javascript:;" class="tag_item">利晴天</span>/
+                                            <span href="javascript:;" class="tag_item">金靖</span>/
+                                            <span href="javascript:;" class="tag_item">肖骁</span>/
+                                            <span href="javascript:;" class="tag_item">小猫</span>/
+                                            <span href="javascript:;" class="tag_item">王博文</span>/
+                                            <span href="javascript:;" class="tag_item">陈妍希</span>/
+                                            <span href="javascript:;" class="tag_item">蔡卓妍</span>
+                                        </div>
+                                        <div class="video_recommend">
+                                            <p class="txt txt_two" title="全网热播，大家都在看">全网热播，大家都在看</p>
+                                        </div>
+                                        <div class="video_review cf">
+                                            <div class="review_author">
+                                                <span class="author_pic">
+                                                </span>
+                                            </div>
+                                            <div class="review_content">
+                                                <div class="review_name">云中鹤 ’ 地上狗™</div>
+                                                <div class="review_txt" title="真得越看小白越帅，简直帅翻了！！而且最后只剩大王的时候小白说的话真的非常机智啊！！这个游戏里除了康永哥和马老师，只剩小白最会玩啊！！">真得越看小白越帅，简直帅翻了！！而且最后只剩大王的时候小白说的话真的非常机智啊！！这个游戏里除了康永哥和马老师，只剩小白最会玩啊！！
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="margin:0 0 0 4px !important;">
+                                <div class="pic">
+                                    <img src="img/indexImg/p8.jpg" width="110%" alt="" />
+                                    <div class="redian">01:36:56</div>
+                                    <div class="figure_score"><em class="score_l">6</em><em class="score_s">.7</em></div>
+                                </div>
+                                <div class="lis_content">
+                                    <a href="#">忠爱无言</a>
+                                    <span>12岁狗狗为主人拉车11年</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 右 -->
+            <div class="wrapper_side">
+                <div class="mod_box">
+                    <div class="mod_title">
+                        <h2 class="title">
+                            <span class="text_medium">综艺热播榜</span>
+                        </h2>
+                        <div class="title_tabs">
+                            <a data-relate="day" class="title_tab" href="javascript:">日榜</a>
+                            <a data-relate="week" class="title_tab tabscurr" href="javascript:">周榜</a>
+                            <a data-relate="month" class="title_tab" href="javascript:">月榜</a>
+                        </div>
+                    </div>
+
+                    <div class="mod_figures">
+                        <ul class="figures_list">
+                            <li>
+                                <a href="#" class="figure">
+                                    <img src="img/childPageImg/rbb1.jpg">
+                                    <i class="icon_num icon_num_1">1</i>
+                                </a>
+                                <strong class="figure_title">
+                                    <a target="_blank" href="#">极限挑战 第3季</a>
+                                </strong>
+                                <div class="figure_desc">第2期：男人帮佛山学武功</div>
+                                <div class="figure_count">
+                                    <span class="num">88,275,164</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="figure">
+                                    <img src="img/childPageImg/rbb2.jpg">
+                                    <i class="icon_num icon_num_2">2</i>
+                                </a>
+                                <strong class="figure_title">
+                                    <a target="_blank" href="#">明日之子</a>
+                                </strong>
+                                <div class="figure_desc">第6期：破次元~花花与荷兹同台比心</div>
+                                <div class="figure_count">
+                                    <span class="num">64,579,024</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="figure">
+                                    <img src="img/childPageImg/rbb3.jpg">
+                                    <i class="icon_num icon_num_3">3</i>
+                                </a>
+                                <strong class="figure_title">
+                                    <a target="_blank" href="#">约吧大明星 第2季</a>
+                                </strong>
+                                <div class="figure_desc">第10期：收官！鹿晗献唱乔欣泪目</div>
+                                <div class="figure_count">
+                                    <span class="num">29,481,929</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="figure">
+                                    <img src="img/childPageImg/rbb4.jpg">
+                                    <i class="icon_num">4</i>
+                                </a>
+                                <strong class="figure_title">
+                                    <a target="_blank" href="#">开心剧乐部</a>
+                                </strong>
+                                <div class="figure_desc">第2期：宋小宝爆笑催眠贾玲</div>
+                                <div class="figure_count">
+                                    <span class="num">28,673,108</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="figure">
+                                    <img src="img/childPageImg/rbb5.jpg">
+                                    <i class="icon_num">5</i>
+                                </a>
+                                <strong class="figure_title">
+                                    <a target="_blank" href="#">我们相爱吧之爱有天意</a>
+                                </strong>
+                                <div class="figure_desc">第7期：王鸥明道泰国冲浪</div>
+                                <div class="figure_count">
+                                    <span class="num">25,766,451</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="figure">
+                                    <img src="img/childPageImg/rbb6.jpg">
+                                    <i class="icon_num">6</i>
+                                </a>
+                                <strong class="figure_title">
+                                    <a target="_blank" href="#">开心相对论</a>
+                                </strong>
+                                <div class="figure_desc">第2期：王祖蓝为“大男子主义”喊冤</div>
+                                <div class="figure_count">
+                                    <span class="num">22,192,688</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="figure">
+                                    <img src="img/childPageImg/rbb7.jpg">
+                                    <i class="icon_num">7</i>
+                                </a>
+                                <strong class="figure_title">
+                                    <a target="_blank" href="#">饭局的诱惑 第2季</a>
+                                </strong>
+                                <div class="figure_desc">第1期：蔡康永加盟《饭局2》，包文婧回应质疑</div>
+                                <div class="figure_count">
+                                    <span class="num">17,205,735</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="figure">
+                                    <img src="img/childPageImg/rbb8.jpg">
+                                    <i class="icon_num">8</i>
+                                </a>
+                                <strong class="figure_title">
+                                    <a target="_blank" href="#">吐丝联盟</a>
+                                </strong>
+                                <div class="figure_desc">第1期：撒贝宁张绍刚10年后再同台</div>
+                                <div class="figure_count">
+                                    <span class="num">16,741,554</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="figure">
+                                    <img src="img/childPageImg/rbb9.jpg">
+                                    <i class="icon_num">9</i>
+                                </a>
+                                <strong class="figure_title">
+                                    <a target="_blank" href="#">脑力男人时代</a>
+                                </strong>
+                                <div class="figure_desc">第9期：大S面试自曝和女儿争宠</div>
+                                <div class="figure_count">
+                                    <span class="num">14,879,026</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="figure">
+                                    <img src="img/childPageImg/rbb10.jpg">
+                                    <i class="icon_num">10</i>
+                                </a>
+                                <strong class="figure_title">
+                                    <a target="_blank" href="#">集结吧王者</a>
+                                </strong>
+                                <div class="figure_desc">第3期：王者荣耀大神来了！</div>
+                                <div class="figure_count">
+                                    <span class="num">13,866,123</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 身体结束 -->
+
+
+
+    <!-- 底部 -->
+    <footer>
+        <div class="footer_main">
+            <div class="footer_top">
+                <div>
+                    <em>热门频道</em>
+                    <ul>
+                        <li><a href="#">电视剧</a></li>
+                        <li><a href="#">综艺</a></li>
+                        <li><a href="#">电影</a></li>
+                        <li><a href="#">娱乐</a></li>
+                        <li><a href="#">MV</a></li>
+                        <li><a href="#">动漫</a></li>
+                        <li><a href="#">游戏</a></li>
+                        <li><a href="#">VIP影院</a></li>
+                        <li><a href="#">英美剧</a></li>
+                        <li><a href="#">纪录片</a></li>
+                        <li><a href="#">新闻</a></li>
+                        <li><a href="#">体育</a></li>
+                        <li><a href="#">生活</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <em>特色推荐</em>
+                    <ul>
+                        <li><a href="#">原创自媒体</a></li>
+                        <li><a href="#">微电影</a></li>
+                        <li><a href="#">拍客</a></li>
+                        <li><a href="#">搞笑</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <em>软件下载</em>
+                    <ul>
+                        <li><a href="#">PC版</a></li>
+                        <li><a href="#">iPhone版</a></li>
+                        <li><a href="#">iPad版</a></li>
+                        <li><a href="#">TV版</a></li>
+                        <li><a href="#">Android</a></li>
+                        <li><a href="#">Phone版</a></li>
+                    </ul>
+                </div>       
+                <div>
+                    <em>服务</em>
+                    <ul>
+                        <li><a href="#">客服</a></li>
+                        <li><a href="#">反馈</a></li>
+                        <li><a href="#">投诉</a></li>
+                        <li><a href="#">免广告合作</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="footermenu">
+                    <a href="#"> 关于蝴蝶 </a>|
+                    <a href="#"> About Butterfly </a>|
+                    <a href="#"> 服务条款 </a>|
+                    <a href="#"> 广告服务 </a>|
+                    <a href="#"> 蝴蝶招聘 </a>|
+                    <a href="#"> 客服中心 </a>|
+                    <a href="#"> 网站导航</a>
+                </div>
+                <div class="copyright">Copyright © 1998 - 2017 Butterfly. <a href="#">All Rights Reserved.</a></div>
+                <div class="copyrightzh">Butterfly公司 <a href="#">版权所有</a> <a href="#">Butterfly网络文化经营许可证</a></div>
+            </div>
+        </div>
+    </footer>
+    <!-- 底部结束 -->
+</body>
+</html>
