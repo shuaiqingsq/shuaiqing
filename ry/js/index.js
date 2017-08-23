@@ -32,6 +32,10 @@ $(function(){
         $(this).css("marginTop","0px");
     });
 
+    $(".business .container ul li").eq(0).animate({marginTop:0+"px"},600);
+                $(".business .container ul li").eq(1).animate({marginTop:0+"px"},700);
+                $(".business .container ul li").eq(2).animate({marginTop:0+"px"},800);
+                $(".business .container ul li").eq(3).animate({marginTop:0+"px"},900);
     $(function(){
         $(window).scroll(function(){
             var scrollTop = $(this).scrollTop();

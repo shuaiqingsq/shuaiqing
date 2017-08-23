@@ -85,14 +85,14 @@ header {
     overflow: hidden; }
     .banner .carousel ul {
       list-style: none;
-      width: 300%;
+      width: 400%;
       margin: 0;
       display: inline-block;
       height: 558px;
       position: relative; }
       .banner .carousel ul li {
         float: left;
-        width: 1903px; }
+        width: 25%; }
     .banner .carousel .an {
       position: absolute;
       top: 50%;
