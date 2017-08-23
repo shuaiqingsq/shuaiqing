@@ -1,8 +1,10 @@
 $(function(){
      // 轮播图
     var timer = null,i=0;
+    var pm = innerWidth-17;
+    console.log(pm);
     function banner(i){
-        $(".carousel ul").stop(false,true).animate({left:-i*1903+"px"},1000);
+        $(".carousel ul").stop(false,true).animate({left:-i*pm+"px"},1000);
     }
     timer=setInterval(lb,3000);
     function lb(){
